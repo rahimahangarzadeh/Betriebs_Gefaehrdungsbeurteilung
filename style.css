@@ -776,16 +776,16 @@ body {
 /* ---- VORLAGEN BUTTONS ---- */
 
 .template-buttons {
-  max-width: 1040px;
-  margin: 20px auto 0;
-  padding: 30px 40px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
+  margin-bottom: 28px;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .template-label {
@@ -793,29 +793,28 @@ body {
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
-  color: var(--text);
+  color: var(--text-muted);
   text-transform: uppercase;
-  margin-right: 10px;
-  width: auto;
+  margin-right: 6px;
 }
 
 .template-btn {
-  padding: 12px 30px;
-  background: white;
-  border: 2px solid #333;
-  border-radius: 6px;
+  padding: 10px 20px;
+  background: var(--bg);
+  border: 2px solid var(--border-dark);
+  border-radius: var(--radius);
   font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: #333;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s;
 }
 
 .template-btn:hover {
-  background: var(--accent);
+  background: var(--accent-light);
   border-color: var(--accent);
-  color: white;
+  color: var(--accent-dark);
   transform: translateY(-1px);
 }
 
