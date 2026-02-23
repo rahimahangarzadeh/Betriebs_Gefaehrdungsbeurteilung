@@ -358,18 +358,14 @@ async function submitForm(event) {
     
     console.log('Response Status:', response.status);
     
-    if (response.ok) {
-      messageDiv.innerHTML = '<div class="form-message success">✓ Gefährdungsbeurteilung erfolgreich gesendet!</div>';
-      
-      // Formular nach 2 Sekunden zurücksetzen
-      setTimeout(() => {
-        document.getElementById('mainForm').reset();
-        setCurrentDateTime();
-        messageDiv.innerHTML = '';
-      }, 2000);
-    } else {
-      throw new Error('Netzwerkfehler');
-    }
+  await response.text();
+    messageDiv.innerHTML = '<div class="form-message success">✓ Gefährdungsbeurteilung erfolgreich gesendet!</div>';
+    
+    setTimeout(() => {
+      document.getElementById('mainForm').reset();
+      setCurrentDateTime();
+      messageDiv.innerHTML = '';
+    }, 2000);
   } catch (error) {
     console.error('Error:', error);
     messageDiv.innerHTML = '<div class="form-message error">Fehler beim Senden. Bitte versuchen Sie es erneut.</div>';
